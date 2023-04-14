@@ -5,9 +5,9 @@
 <script>
     function saltarlinea(){
 
-    	document.write("<br>");
-    	document.write("<br>");
-    	document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
 
     }
 
@@ -19,7 +19,7 @@
 
 
    function calcularImc(peso,altur){
-   	    return  peso/(altur*altur)
+        return  peso/(altur*altur)
    }
    nombre = prompt(" informe su nombre")
    pesoInfor = prompt(nombre+" informe su peso ")
@@ -28,6 +28,27 @@
    imcCalcu = calcularImc(pesoInfor,alturinfor)
 
     imprimir(nombre+" su imc calculado es: "+imcCalcu)
-   
+
+    if (imcCalcu<18.5) {
+        imprimir(" bajo lo recomendado");
+    }
+
+    if (imcCalcu>=18.5) {
+        if (imcCalcu<25) {
+            imprimir("esta bien dentro de lo normal")
+        }
+        
+    }
+
+    if (imcCalcu>=25) {
+        if (imcCalcu<30) {
+            imprimir("considerado como sobre peso")
+        }
+        
+    }
+
+    if (imcCalcu>=30) {
+        imprimir("IMC considerado como obecidad")
+    }
 
   </script>
