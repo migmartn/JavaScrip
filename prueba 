@@ -1,0 +1,21 @@
+<script>
+window.onload = function() {
+  // Crear un elemento de enlace
+  const downloadLink = document.createElement('a');
+
+  // Establecer el atributo href al archivo a descargar
+  downloadLink.href = 'ruta/al/archivo.txt'; // Reemplaza con la ruta real
+
+  // Establecer el atributo download para indicar que es una descarga (opcional)
+  downloadLink.download = 'nombre_del_archivo.txt'; // Reemplaza con el nombre deseado
+
+  // Agregar el enlace al documento
+  document.body.appendChild(downloadLink);
+
+  // Simular un clic en el enlace para iniciar la descarga
+  downloadLink.click();
+
+  // Eliminar el enlace del documento (opcional)
+  document.body.removeChild(downloadLink);
+};
+</script>
